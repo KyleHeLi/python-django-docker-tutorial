@@ -16,6 +16,7 @@ class Topic(models.Model):
     last_update = models.DateTimeField(auto_now_add=True)
     board = models.ForeignKey(Board, related_name='topics', on_delete=True)
     starter = models.ForeignKey(User, related_name='topics', on_delete=True)
+    last_update = models.DateTimeField(auto_now_add=True)
 
 
 class Post(models.Model):
